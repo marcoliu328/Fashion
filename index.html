@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>fashion</title>
+
+    <!-- Google Fonts -->
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Lexend+Giga&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- stylesheet -->
+    <link a href="css/styles.css" rel="stylesheet" />
+
+    <!-- jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- tweenmax - gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="hero-section">
+        <div class="hero-gif"></div>
+
+        <div class="hero-title">
+          <h1 class="glitch" data-text="Self-Expression">Self-Expression.</h1>
+          <a href="gallery.html">click to begin</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      TweenLite.fromTo(
+        ".hero-title h1",
+        0.3,
+        {
+          x: -6,
+          y: 2,
+          opacity: 0
+        },
+        {
+          delay: 4,
+          x: 6,
+          y: -2,
+          opacity: 1,
+          ease: RoughEase.ease.config({
+            strength: 8,
+            points: 40,
+            template: Linear.easeNone,
+            randomize: false
+          }),
+          clearProps: "all"
+        }
+      );
+
+      TweenLite.fromTo(
+        ".hero-title a",
+        0.3,
+        {
+          x: -6,
+          y: 2,
+          opacity: 0
+        },
+        {
+          delay: 5,
+          x: 6,
+          y: -2,
+          opacity: 1,
+          ease: RoughEase.ease.config({
+            strength: 8,
+            points: 40,
+            template: Linear.easeNone,
+            randomize: false
+          }),
+          clearProps: "all"
+        }
+      );
+    </script>
+  </body>
+</html>
